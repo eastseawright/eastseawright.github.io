@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Deployment | East Seawright</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ES</a>
+            <div class="nav-links">
+                <a href="index.html#projects">← Back to Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <span class="project-category">Cloud Infrastructure & DevOps</span>
+            <h1 class="project-title">AWS Cloud Deployment</h1>
+            <p class="project-intro">
+                Full-stack WordPress website deployment leveraging Amazon Web Services infrastructure, 
+                including EC2 instances, Lightsail, Route 53 DNS management, CloudFront CDN, and SSL 
+                certificate implementation for secure, scalable hosting.
+            </p>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Type</span>
+                    <span class="meta-value">Personal Project</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">Dec 2021 - Present</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Certification</span>
+                    <span class="meta-value">AWS Cloud Practitioner</span>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Amazon EC2</span>
+                <span class="tech-tag">AWS Lightsail</span>
+                <span class="tech-tag">Route 53</span>
+                <span class="tech-tag">CloudFront</span>
+                <span class="tech-tag">AWS Certificate Manager</span>
+                <span class="tech-tag">VPC & Networking</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                This project demonstrates end-to-end cloud infrastructure setup and deployment using AWS 
+                services. Starting with foundational cloud concepts and progressing to complex networking 
+                configurations, I deployed a production-ready WordPress site with enterprise-grade security, 
+                performance, and scalability.
+            </p>
+            <p>
+                The project served both as a personal website for sharing IT content and as a practical 
+                learning environment for cloud technologies, culminating in earning the AWS Certified Cloud 
+                Practitioner certification.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical Architecture</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>Compute Layer</h3>
+                    <p>EC2 instances configured for optimal performance and Lightsail for simplified WordPress 
+                    deployment.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Networking</h3>
+                    <p>Custom VPC setup with proper subnet configuration, security groups, and network ACLs 
+                    for secure infrastructure.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Content Delivery</h3>
+                    <p>CloudFront CDN integration for global content distribution and reduced latency.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Security & DNS</h3>
+                    <p>Route 53 for domain management and ACM for SSL/TLS certificate implementation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Implementation Details</h2>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>EC2 Configuration</h3>
+                        <p>
+                            Set up and configured EC2 instances from scratch, including choosing appropriate 
+                            instance types, configuring security groups, managing SSH keys, and optimizing 
+                            instance performance. Learned to balance cost efficiency with performance requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>WordPress on Lightsail</h3>
+                        <p>
+                            Deployed WordPress using AWS Lightsail for simplified management while maintaining 
+                            AWS ecosystem integration. Configured database connections, file storage, and backup 
+                            strategies for data persistence and disaster recovery.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>Network Architecture</h3>
+                        <p>
+                            Designed and implemented a Virtual Private Cloud (VPC) with public and private 
+                            subnets. Configured route tables, internet gateways, and NAT gateways for proper 
+                            network isolation and security. Set up security groups with least-privilege access 
+                            principles.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-number">04</div>
+                    <div class="feature-content">
+                        <h3>DNS & Domain Management</h3>
+                        <p>
+                            Configured Route 53 for domain name management, including DNS record creation, 
+                            health checks, and routing policies. Managed domain registration and transfer 
+                            processes through AWS.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-number">05</div>
+                    <div class="feature-content">
+                        <h3>SSL/TLS Implementation</h3>
+                        <p>
+                            Implemented HTTPS using AWS Certificate Manager (ACM) for free SSL/TLS certificates. 
+                            Configured certificate validation through DNS, set up automatic renewal, and ensured 
+                            secure HTTPS connections across the entire site.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-number">06</div>
+                    <div class="feature-content">
+                        <h3>CloudFront CDN</h3>
+                        <p>
+                            Set up CloudFront distribution for global content delivery, reducing latency for 
+                            international visitors. Configured caching strategies, origin settings, and 
+                            invalidation policies for optimal performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>AWS Services Deep Dive</h2>
+            <div class="technical-details">
+                <div class="detail-item">
+                    <h4>Identity & Access Management (IAM)</h4>
+                    <p>
+                        Created IAM users, groups, and roles with specific permissions following the principle 
+                        of least privilege. Implemented multi-factor authentication for enhanced security.
+                    </p>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Active Directory Integration</h4>
+                    <p>
+                        Administered Active Directory on Windows Server 2019, including creating Domain 
+                        Controllers, managing IP addressing, and configuring DNS services for enterprise 
+                        network management.
+                    </p>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Cost Optimization</h4>
+                    <p>
+                        Monitored AWS costs using Cost Explorer and implemented strategies to optimize spending, 
+                        including right-sizing instances, using reserved capacity where appropriate, and 
+                        implementing automated shutdown schedules for non-production resources.
+                    </p>
+                </div>
+                
+                <div class="detail-item">
+                    <h4>Monitoring & Logging</h4>
+                    <p>
+                        Configured CloudWatch for monitoring resource utilization, setting up alarms for 
+                        critical metrics, and implementing logging strategies for troubleshooting and audit 
+                        compliance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Skills Developed</h2>
+            <ul class="learning-list">
+                <li>
+                    <strong>Cloud Architecture Design:</strong> Learned to design scalable, secure, and 
+                    cost-effective cloud infrastructure. Understanding trade-offs between different AWS 
+                    services and when to use each.
+                </li>
+                <li>
+                    <strong>Networking Fundamentals:</strong> Deep understanding of VPCs, subnets, routing, 
+                    and security groups. Practical experience with TCP/IP, DNS, and how internet traffic flows.
+                </li>
+                <li>
+                    <strong>Security Best Practices:</strong> Implementing defense-in-depth strategies with 
+                    multiple layers of security. Understanding AWS shared responsibility model and securing 
+                    both infrastructure and applications.
+                </li>
+                <li>
+                    <strong>DevOps Mindset:</strong> Automation, infrastructure as code concepts, and the 
+                    importance of reproducible deployments. Setting up CI/CD pipelines for streamlined updates.
+                </li>
+                <li>
+                    <strong>Troubleshooting & Debugging:</strong> Developed systematic approaches to diagnosing 
+                    and resolving infrastructure issues, from networking problems to application errors.
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>AWS Certification</h2>
+            <div class="cert-card">
+                <div class="cert-icon">AWS</div>
+                <div class="cert-info">
+                    <h4>AWS Certified Cloud Practitioner</h4>
+                    <p>
+                        Validated knowledge of AWS Cloud computing and basic global infrastructure, AWS Cloud 
+                        architectural principles, AWS Cloud value proposition, key services and their common 
+                        use cases, basic security and compliance aspects, and billing and pricing.
+                    </p>
+                    <a href="https://www.credly.com/badges/a724e1a1-7f0f-487f-96b9-d8df84295c75/public_url" 
+                       target="_blank" 
+                       class="cert-link" 
+                       style="color: var(--accent-primary); font-weight: 600;">
+                        View Credential on Credly →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Project Outcomes</h2>
+            <div class="impact-grid">
+                <div class="impact-stat">
+                    <div class="impact-number">99.9%</div>
+                    <div class="impact-label">Uptime Achieved</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">6</div>
+                    <div class="impact-label">AWS Services Integrated</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">100%</div>
+                    <div class="impact-label">HTTPS Coverage</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem;">
+                Successfully deployed a production-grade WordPress site with enterprise-level security and 
+                performance. The hands-on experience with AWS services provided the foundation for earning 
+                the AWS Cloud Practitioner certification and continues to serve as a learning platform for 
+                new cloud technologies.
+            </p>
+        </div>
+
+        <div class="content-section presentation-section">
+            <h2>Project Presentation</h2>
+            <p class="presentation-note">
+                <em>Upload your PowerPoint presentation to embed here.</em>
+            </p>
+            
+            <div class="presentation-placeholder">
+                <div class="placeholder-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="9"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    <p>PowerPoint Presentation Embed Area</p>
+                    <span>Upload your presentation to Google Slides or SlideShare to embed here</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-nav">
+        <a href="project-nonprofit-website.html" class="nav-button">
+            <span>← Previous: UWM Safety Website</span>
+        </a>
+        <a href="index.html#projects" class="nav-button">
+            <span>Back to All Projects</span>
+        </a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 East Seawright. Built with HTML, CSS, and hosted on GitHub Pages.</p>
+            <p class="footer-location">Milwaukee, WI</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
