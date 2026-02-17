@@ -87,6 +87,17 @@ body {
     color: var(--accent-secondary);
 }
 
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    opacity: 0.8;
+}
+
 .nav-links {
     display: flex;
     gap: 2.5rem;

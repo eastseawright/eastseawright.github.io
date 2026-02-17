@@ -10,7 +10,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
-            <a href="index.html" class="logo">ES</a>
+            <a href="index.html" class="logo"><img src="ES_Logo.png" alt="ES" class="logo-img"></a>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#about">About</a>
@@ -29,7 +29,7 @@
             <p class="hero-subtitle">UX/UI Applications Intern in Global IT at Clarios | Graduating May 2026</p>
             <p class="hero-description">
                 I build applications that help people get their work done — from enterprise tools 
-                and AI-powered chatbots to cloud infrastructure and data dashboards. I focus on 
+                and AI agents to cloud infrastructure and data dashboards. I focus on 
                 making technology practical, reliable, and easy to use.
             </p>
             <div class="hero-cta">
@@ -43,11 +43,11 @@
                 <div class="stat-label">GPA</div>
             </div>
             <div class="stat">
-                <div class="stat-number">AWS</div>
-                <div class="stat-label">Certified</div>
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Projects</div>
             </div>
             <div class="stat">
-                <div class="stat-number">2025</div>
+                <div class="stat-number">2026</div>
                 <div class="stat-label">Graduate</div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                 <div class="project-number">02</div>
                 <div class="project-content">
                     <h3>AI Battery Assistant</h3>
-                    <p>Built an AI chatbot that helps customers find battery warranty information in 20 seconds instead of 5+ minutes of searching through web pages.</p>
+                    <p>Built an AI agent that helps customers find battery warranty information in 20 seconds instead of 5+ minutes of searching through web pages.</p>
                     <div class="project-tags">
                         <span class="tag">Copilot Studio</span>
                         <span class="tag">AI/LLM</span>
@@ -158,9 +158,9 @@
             <div class="about-text">
                 <p class="lead">I'm finishing my Information Science and Technology degree at UW-Milwaukee and currently work as a UX/UI Applications Intern at Clarios in their Global IT department.</p>
                 
-                <p>My day-to-day work covers a wide range: building internal tools with Power Apps, creating AI chatbots with Microsoft Copilot Studio, setting up cloud infrastructure on AWS, and analyzing data to help teams make better decisions. I care about building things that actually work well for the people using them.</p>
+                <p>My day-to-day work covers a wide range: building internal tools with Power Apps, creating AI agents with Microsoft Copilot Studio, working with Azure cloud services, and analyzing data to help teams make better decisions. I care about building things that actually work well for the people using them.</p>
                 
-                <p>At Clarios, I've built customer sentiment dashboards using Azure, fixed security vulnerabilities across global websites, and developed an AI assistant that cuts warranty lookup time by 93%.</p>
+                <p>At Clarios, I've built customer sentiment dashboards using Azure, fixed security vulnerabilities across global websites, and developed an AI agent that cuts warranty lookup time by 93%.</p>
             </div>
             
             <div class="skills-section">
@@ -169,8 +169,8 @@
                     <div class="skill-category">
                         <h4>Cloud & Infrastructure</h4>
                         <ul>
-                            <li>Amazon Web Services (Certified)</li>
                             <li>Microsoft Azure</li>
+                            <li>Amazon Web Services</li>
                             <li>Route 53, EC2, Lightsail</li>
                             <li>CloudFront CDN</li>
                         </ul>
@@ -179,10 +179,10 @@
                     <div class="skill-category">
                         <h4>Development</h4>
                         <ul>
-                            <li>Python</li>
+                            <li>Power Fx</li>
                             <li>HTML, CSS, PHP</li>
+                            <li>Python</li>
                             <li>WordPress & Sitefinity</li>
-                            <li>Microsoft Power Apps</li>
                         </ul>
                     </div>
                     
@@ -208,17 +208,6 @@
                 </div>
             </div>
             
-            <div class="certifications">
-                <h3>Certifications</h3>
-                <div class="cert-card">
-                    <div class="cert-icon">AWS</div>
-                    <div class="cert-info">
-                        <h4>AWS Certified Cloud Practitioner</h4>
-                        <p>Cloud computing, global infrastructure, architectural principles, security, and billing</p>
-                        <a href="https://www.credly.com/badges/a724e1a1-7f0f-487f-96b9-d8df84295c75/public_url" target="_blank" class="cert-link">View Credential →</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -233,9 +222,9 @@
             <p class="contact-text">I'm looking for full-time opportunities starting after May 2026. If you need someone who can build practical tools, work across teams, and pick up new technologies quickly, let's talk.</p>
             
             <div class="contact-links">
-                <a href="/cdn-cgi/l/email-protection#512234302623383639253430222511363c30383d7f323e3c" class="contact-link">
+                <a href="javascript:void(0)" class="contact-link" id="email-copy-btn" onclick="copyEmail(this)">
                     <span class="contact-icon">✉</span>
-                    <span><span class="__cf_email__" data-cfemail="483b2d293f3a212f203c2d293b3c082f25292124662b2725">[email&#160;protected]</span></span>
+                    <span id="email-label">Email <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span>
                 </a>
                 <a href="https://www.linkedin.com/in/east-seawright-4029ab244/" target="_blank" class="contact-link">
                     <span class="contact-icon">in</span>
@@ -252,4 +241,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 East Seawright. Built with HTML, CSS, and hosted on GitHub Pages.</p
+            <p>&copy; East Seawright. Ode to iteration_</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
