@@ -23,9 +23,9 @@
             <span class="project-category">Cloud Infrastructure & DevOps</span>
             <h1 class="project-title">WordPress Cloud Deployment with AWS Lightsail & CDN</h1>
             <p class="project-intro">
-                Complete WordPress deployment leveraging multiple AWS services including Lightsail, Route 53, 
-                Certificate Manager, S3, CloudFront CDN, and IAM. Implemented secure HTTPS, global content 
-                delivery, and scalable media storage with automated offloading from the WordPress server.
+                Set up a WordPress website from scratch using AWS — from registering the domain and 
+                configuring the server, to adding security certificates, setting up cloud storage for 
+                media files, and using a content delivery network for fast page loads worldwide.
             </p>
             
             <div class="project-meta">
@@ -56,15 +56,15 @@
         <div class="content-section">
             <h2>Project Overview</h2>
             <p>
-                This project demonstrates a production-ready WordPress deployment using AWS's suite of cloud 
-                services. The architecture prioritizes security (HTTPS everywhere), performance (global CDN), 
-                scalability (serverless compute and object storage), and cost efficiency (pay-as-you-go model).
+                This project is a real-world WordPress website built entirely on AWS. The goal was to 
+                create a fast, secure, and affordable site using cloud services — and to learn how 
+                different AWS tools work together in a production setup.
             </p>
             <p>
-                Rather than using traditional server hosting, this implementation leverages AWS Lightsail for 
-                simplified WordPress deployment, Route 53 for DNS management, CloudFront for global content 
-                delivery, S3 for media storage, and Certificate Manager for SSL/TLS certificates. The result 
-                is a fast, secure, and highly available website architecture.
+                Instead of traditional web hosting, I used AWS Lightsail for the server, Route 53 for 
+                the domain, S3 for storing images and media, CloudFront for fast delivery worldwide, 
+                and Certificate Manager for HTTPS security. The result is a professional website that's 
+                secure, fast, and easy to maintain.
             </p>
         </div>
 
@@ -72,24 +72,24 @@
             <h2>Architecture Overview</h2>
             <div class="challenge-grid">
                 <div class="challenge-card">
-                    <h3>Compute Layer</h3>
-                    <p>AWS Lightsail instance running WordPress on Linux with Bitnami stack for simplified 
-                    application deployment.</p>
+                    <h3>Web Server</h3>
+                    <p>AWS Lightsail running WordPress — a simple, affordable way to host a website 
+                    without managing complex server infrastructure.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Content Delivery</h3>
-                    <p>CloudFront CDN distributing static assets globally from S3 origin for reduced latency 
-                    and improved user experience.</p>
+                    <h3>Fast Delivery</h3>
+                    <p>CloudFront delivers images and files from servers close to each visitor, so the 
+                    site loads quickly no matter where someone is in the world.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Storage & Security</h3>
-                    <p>S3 bucket for media storage with IAM roles for secure access, SSL/TLS certificates for 
-                    HTTPS encryption.</p>
+                    <h3>Media Storage & Security</h3>
+                    <p>S3 stores all images and media files separately from the server, with proper access 
+                    controls and HTTPS encryption on everything.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>DNS Management</h3>
-                    <p>Route 53 handling domain registration, hosted zones, and DNS records for seamless traffic 
-                    routing.</p>
+                    <h3>Domain Setup</h3>
+                    <p>Route 53 handles the domain name and directs traffic to the right place — the web 
+                    server for pages, the CDN for media files.</p>
                 </div>
             </div>
         </div>
@@ -101,18 +101,15 @@
                 <div class="feature-item">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <h3>Infrastructure Setup: Lightsail & Static IP</h3>
+                        <h3>Set Up the Server</h3>
                         <p>
-                            Deployed WordPress using AWS Lightsail, which provides a simplified interface for 
-                            serverless application deployment. Chose a Linux operating system with Bitnami's 
-                            WordPress stack for optimized performance. Assigned a static IP address to the 
-                            Lightsail instance to ensure consistent DNS resolution—critical for websites since 
-                            dynamic IPs can change unexpectedly.
+                            Created a Lightsail instance with WordPress pre-installed. Lightsail is AWS's 
+                            simpler hosting option — it gives you a working server with predictable monthly 
+                            pricing. Assigned a static IP address so the domain always points to the right place.
                         </p>
                         <p style="margin-top: 1rem;">
-                            <strong>Technical Decision:</strong> Lightsail over EC2 provided the right balance 
-                            of simplicity and control for this use case, with predictable pricing and integrated 
-                            WordPress management through Bitnami.
+                            <strong>Why Lightsail:</strong> For a WordPress site, Lightsail offers the right 
+                            balance of simplicity and control without the complexity of managing a full EC2 instance.
                         </p>
                     </div>
                 </div>
@@ -120,15 +117,14 @@
                 <div class="feature-item">
                     <div class="feature-number">02</div>
                     <div class="feature-content">
-                        <h3>DNS Configuration: Route 53 Domain & Hosted Zones</h3>
+                        <h3>Connect the Domain</h3>
                         <p>
-                            Registered domain through Route 53 and created a hosted zone for DNS management. 
-                            Configured multiple DNS records: A records pointing to the Lightsail static IP 
-                            (both root domain and www subdomain), and a CNAME record for the CDN subdomain 
-                            pointing to cloudfront.net for content delivery.
+                            Registered the domain through Route 53 and set up DNS records to point the 
+                            domain to the server. Created separate records for the main site (example.com), 
+                            the www version, and a CDN subdomain for media delivery.
                         </p>
                         <p style="margin-top: 1rem;">
-                            <strong>Key Records Created:</strong>
+                            <strong>DNS Records Created:</strong>
                         </p>
                         <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-secondary);">
                             <li>A record: @ → Lightsail static IP</li>
@@ -141,12 +137,11 @@
                 <div class="feature-item">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <h3>WordPress Configuration & Initial Setup</h3>
+                        <h3>Configure WordPress</h3>
                         <p>
-                            Accessed WordPress admin panel at domain.com/wp-admin using Bitnami-generated 
-                            credentials. Changed default login credentials following security best practices. 
-                            Configured WordPress settings for the custom domain and prepared the site for 
-                            SSL certificate installation and S3 integration.
+                            Logged into the WordPress admin panel, changed the default credentials for 
+                            security, and configured the site to use the custom domain. Prepared the setup 
+                            for the next steps: adding SSL and connecting cloud storage.
                         </p>
                     </div>
                 </div>
@@ -154,16 +149,15 @@
                 <div class="feature-item">
                     <div class="feature-number">04</div>
                     <div class="feature-content">
-                        <h3>Security Implementation: SSL/TLS Certificates</h3>
+                        <h3>Add HTTPS Security</h3>
                         <p>
-                            Requested SSL certificate through AWS Certificate Manager (ACM) for the domain. 
-                            Created certificates for three domain variants: the root domain, www subdomain, 
-                            and cdn subdomain. ACM provides free SSL/TLS certificates with automatic renewal, 
-                            crucial for maintaining HTTPS without manual intervention.
+                            Got free SSL certificates through AWS Certificate Manager for the main domain, 
+                            www subdomain, and CDN subdomain. AWS handles automatic renewal so the certificates 
+                            never expire without manual intervention.
                         </p>
                         <p style="margin-top: 1rem;">
-                            <strong>Why Multiple Certificates:</strong> Each subdomain (www, cdn) needs its own 
-                            certificate validation to enable HTTPS across all entry points to the site and CDN.
+                            <strong>Why Multiple Certificates:</strong> Each subdomain needs its own certificate 
+                            so that HTTPS works everywhere visitors might access the site or its media files.
                         </p>
                     </div>
                 </div>
@@ -171,23 +165,22 @@
                 <div class="feature-item">
                     <div class="feature-number">05</div>
                     <div class="feature-content">
-                        <h3>Storage Architecture: S3 Bucket & IAM Configuration</h3>
+                        <h3>Set Up Cloud Storage for Media</h3>
                         <p>
-                            Created an S3 bucket for WordPress media storage to offload static files from the 
-                            Lightsail instance. Configured an IAM user with programmatic access to AmazonS3FullAccess 
-                            policy. Installed WP Offload Media plugin to automatically sync WordPress uploads to S3, 
-                            with option to remove files from the server after upload to prevent storage bloat.
+                            Created an S3 bucket to store images and media files separately from the web server. 
+                            Set up a dedicated user account with the right permissions to upload files securely. 
+                            Installed a WordPress plugin that automatically sends new uploads to S3 and can 
+                            remove them from the server to save space.
                         </p>
                         <p style="margin-top: 1rem;">
-                            Edited wp-config.php in the Bitnami WordPress directory to add AWS credentials 
-                            (Access Key ID and Secret Access Key) for the IAM user, enabling WordPress to 
-                            authenticate with S3. Applied bucket policy to allow CloudFront to access objects 
-                            for content delivery.
+                            Added the AWS credentials to the WordPress configuration file so the site can 
+                            communicate with S3 securely. Also set up permissions so CloudFront can read 
+                            the files for delivery.
                         </p>
                         <p style="margin-top: 1rem;">
-                            <strong>Architecture Benefit:</strong> Separating media storage from the application 
-                            server improves performance, reduces server load, and provides scalable storage that 
-                            can grow without affecting the Lightsail instance.
+                            <strong>Why This Matters:</strong> Keeping media files separate from the server 
+                            means the server runs faster, storage scales automatically, and the site can grow 
+                            without hitting capacity limits.
                         </p>
                     </div>
                 </div>
@@ -195,23 +188,21 @@
                 <div class="feature-item">
                     <div class="feature-number">06</div>
                     <div class="feature-content">
-                        <h3>Content Delivery: CloudFront CDN Integration</h3>
+                        <h3>Add Global Content Delivery</h3>
                         <p>
-                            Created a CloudFront distribution with the S3 bucket as the origin. Configured an 
-                            Origin Access Identity (OAI) to allow CloudFront to securely access S3 without making 
-                            the bucket publicly accessible. Set the alternate domain name (CNAME) to the cdn 
-                            subdomain configured in Route 53.
+                            Set up CloudFront to serve media files from servers around the world instead of 
+                            the single origin server. Configured it to pull from the S3 bucket securely — the 
+                            bucket itself stays private while CloudFront handles public delivery.
                         </p>
                         <p style="margin-top: 1rem;">
-                            Updated WP Offload Media plugin to use CloudFront as the delivery provider instead of 
-                            direct S3 URLs. This ensures all media files are served through CloudFront's global edge 
-                            network, dramatically reducing load times for international visitors and reducing bandwidth 
-                            costs on the origin server.
+                            Updated the WordPress plugin to use CloudFront URLs for all media files. This means 
+                            when someone in Europe loads the site, their images come from a nearby server instead 
+                            of traveling all the way back to the US.
                         </p>
                         <p style="margin-top: 1rem;">
-                            <strong>Performance Impact:</strong> CloudFront caches content at edge locations worldwide, 
-                            meaning users download images and media from servers geographically close to them rather 
-                            than making requests all the way back to the origin S3 bucket.
+                            <strong>Speed Impact:</strong> CloudFront caches content at locations worldwide, 
+                            so visitors download images from servers close to them — making pages load 
+                            noticeably faster for international visitors.
                         </p>
                     </div>
                 </div>
@@ -222,39 +213,36 @@
             <h2>Technical Highlights & Key Decisions</h2>
             <div class="technical-details">
                 <div class="detail-item">
-                    <h4>WordPress Plugin Integration: WP Offload Media</h4>
+                    <h4>Automatic Media Uploads</h4>
                     <p>
-                        Selected and configured WP Offload Media plugin to automatically sync WordPress media uploads 
-                        to S3 and serve them through CloudFront. Configured the plugin to remove files from the local 
-                        server after upload, preventing storage bloat on the Lightsail instance while maintaining 
-                        seamless media management within WordPress admin.
+                        Configured a WordPress plugin to automatically send uploaded images to S3 and 
+                        remove them from the server, keeping the server lean without any manual steps.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>IAM Security Best Practices</h4>
+                    <h4>Secure Access Controls</h4>
                     <p>
-                        Created dedicated IAM user with programmatic access specifically for S3 operations rather than 
-                        using root credentials. Granted only AmazonS3FullAccess policy following principle of least 
-                        privilege. Securely configured credentials in wp-config.php rather than storing in plugin settings.
+                        Created a dedicated user account for S3 access with only the permissions it needs — 
+                        rather than using the main admin account. Stored credentials securely in the WordPress 
+                        config file.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>CloudFront Origin Access Identity</h4>
+                    <h4>Private Bucket, Public Delivery</h4>
                     <p>
-                        Implemented OAI to allow CloudFront to access S3 bucket contents without making the bucket 
-                        publicly accessible, maintaining security while enabling global content delivery. This prevents 
-                        direct access to S3 URLs while still serving content through the CDN.
+                        The S3 bucket stays private — only CloudFront can read from it. This means files are 
+                        delivered globally through the CDN without exposing the storage bucket directly.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>Multi-Service Integration</h4>
+                    <h4>Six AWS Services Working Together</h4>
                     <p>
-                        Successfully integrated six different AWS services (Lightsail, Route 53, ACM, S3, IAM, CloudFront) 
-                        into a cohesive architecture. Each service plays a specific role while working together seamlessly—
-                        demonstrating understanding of how cloud services interconnect in production environments.
+                        Connected Lightsail, Route 53, Certificate Manager, S3, IAM, and CloudFront into 
+                        one working system. Each service handles a specific job while they all work together 
+                        seamlessly.
                     </p>
                 </div>
             </div>
@@ -264,26 +252,27 @@
             <h2>Skills Developed</h2>
             <ul class="learning-list">
                 <li>
-                    <strong>Cloud Architecture Design:</strong> Learned to design scalable, secure, and 
-                    cost-effective cloud infrastructure. Understanding trade-offs between different AWS 
-                    services and when to use each.
+                    <strong>Cloud Setup:</strong> Learned to design and build cloud infrastructure that's 
+                    secure, fast, and cost-effective. Understand when to use different AWS services and 
+                    how they fit together.
                 </li>
                 <li>
-                    <strong>Networking Fundamentals:</strong> Deep understanding of VPCs, subnets, routing, 
-                    and security groups. Practical experience with TCP/IP, DNS, and how internet traffic flows.
+                    <strong>Networking:</strong> Gained practical experience with DNS, domain configuration, 
+                    and how internet traffic gets routed from a user's browser to the right server.
                 </li>
                 <li>
-                    <strong>Security Best Practices:</strong> Implementing defense-in-depth strategies with 
-                    multiple layers of security. Understanding AWS shared responsibility model and securing 
-                    both infrastructure and applications.
+                    <strong>Security:</strong> Implemented multiple layers of security — HTTPS certificates, 
+                    access controls, private storage with public delivery. Learned AWS's approach to shared 
+                    security responsibility.
                 </li>
                 <li>
-                    <strong>DevOps Mindset:</strong> Automation, infrastructure as code concepts, and the 
-                    importance of reproducible deployments. Setting up CI/CD pipelines for streamlined updates.
+                    <strong>Automation Mindset:</strong> Set up systems that run on their own — automatic 
+                    certificate renewal, automatic media uploads to cloud storage, and automatic content 
+                    caching worldwide.
                 </li>
                 <li>
-                    <strong>Troubleshooting & Debugging:</strong> Developed systematic approaches to diagnosing 
-                    and resolving infrastructure issues, from networking problems to application errors.
+                    <strong>Troubleshooting:</strong> Developed a systematic approach to diagnosing issues 
+                    across connected cloud services, from DNS problems to storage permissions.
                 </li>
             </ul>
         </div>
@@ -295,9 +284,8 @@
                 <div class="cert-info">
                     <h4>AWS Certified Cloud Practitioner</h4>
                     <p>
-                        Validated knowledge of AWS Cloud computing and basic global infrastructure, AWS Cloud 
-                        architectural principles, AWS Cloud value proposition, key services and their common 
-                        use cases, basic security and compliance aspects, and billing and pricing.
+                        Certified knowledge of AWS cloud services, infrastructure, architectural best practices, 
+                        security, and cost management.
                     </p>
                     <a href="https://www.credly.com/badges/a724e1a1-7f0f-487f-96b9-d8df84295c75/public_url" 
                        target="_blank" 
@@ -327,16 +315,14 @@
             </div>
             
             <p style="margin-top: 2rem;">
-                Successfully deployed a production-grade WordPress site with enterprise-level security, performance, 
-                and scalability. The architecture demonstrates proficiency with multiple AWS services working together: 
-                Lightsail provides simplified compute, Route 53 manages DNS, ACM secures communications with SSL/TLS, 
-                S3 provides scalable storage, IAM controls access, and CloudFront delivers content globally.
+                Built a complete, production-quality WordPress site using six AWS services working together. 
+                The site has automatic HTTPS, media files stored and delivered through the cloud, and fast 
+                load times for visitors anywhere in the world.
             </p>
             <p style="margin-top: 1rem;">
-                The implementation resulted in a fast, secure website with automatic HTTPS, globally distributed content 
-                delivery reducing latency for international visitors, and separation of media storage from the application 
-                server for better performance and scalability. The hands-on experience with this multi-service architecture 
-                provided the practical knowledge that contributed to earning the AWS Cloud Practitioner certification.
+                This hands-on project gave me the practical cloud experience that complemented my AWS 
+                Cloud Practitioner certification studies — learning not just what each service does, but 
+                how to make them all work together in a real deployment.
             </p>
         </div>
 

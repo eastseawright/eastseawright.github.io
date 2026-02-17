@@ -25,9 +25,9 @@
             <span class="project-category">Enterprise Application Development</span>
             <h1 class="project-title">Application Catalog</h1>
             <p class="project-intro">
-                A comprehensive global application management system built with Microsoft Power Apps, 
-                enabling cross-team collaboration and advanced filtering capabilities for Clarios' 
-                international IT operations.
+                A searchable directory for all of Clarios' business applications, built with Microsoft Power Apps. 
+                Employees can quickly find the right tool for their job, see who owns it, and request access — 
+                all in one place.
             </p>
             
             <div class="project-meta">
@@ -56,16 +56,15 @@
         <div class="content-section">
             <h2>Overview</h2>
             <p>
-                At Clarios, there was no central place to view the 600+ applications supporting daily operations 
-                across 7 global regions. Multiple applications were providing the same capabilities, and it was 
-                difficult to identify application ownership and regional availability. With multiple business 
-                and IT owners responsible for different applications, there was a clear need for better digital 
-                organization.
+                Clarios had no central place to view the 600+ applications used across 7 global regions. 
+                Multiple apps were doing the same thing, and nobody had a clear picture of who owned what 
+                or where it was available. Teams wasted time searching for the right tool or accidentally 
+                building something that already existed.
             </p>
             <p>
-                I designed and developed a comprehensive Application Catalog using Microsoft Power Apps that 
-                serves as the single source of truth for all enterprise applications across the organization, 
-                placed at the front of the Global Application SharePoint Site.
+                I designed and built an Application Catalog using Microsoft Power Apps that serves as the 
+                single source of truth for all business applications. It sits at the front of the Global 
+                Application SharePoint site so anyone in the company can find what they need.
             </p>
         </div>
 
@@ -73,19 +72,19 @@
             <h2>The Challenge</h2>
             <div class="challenge-grid">
                 <div class="challenge-card">
-                    <h3>Data Fragmentation</h3>
-                    <p>Application data was scattered across multiple systems, making it difficult to get a 
-                    complete picture of the IT landscape.</p>
+                    <h3>Scattered Information</h3>
+                    <p>Application data lived in different spreadsheets and systems, so nobody had a 
+                    complete picture of what tools were available.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Access Control</h3>
-                    <p>Different stakeholders needed different levels of access and filtering capabilities 
-                    based on their roles and regions.</p>
+                    <h3>Different Needs by Role</h3>
+                    <p>Different teams and regions needed to see and filter applications differently 
+                    based on their specific responsibilities.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Scalability</h3>
-                    <p>The solution needed to handle hundreds of applications and scale with the company's 
-                    growth across multiple countries.</p>
+                    <h3>Growing Scale</h3>
+                    <p>The solution needed to handle hundreds of applications today and keep working 
+                    as the company adds more across new regions.</p>
                 </div>
             </div>
         </div>
@@ -93,20 +92,18 @@
         <div class="content-section">
             <h2>Solution & Implementation</h2>
             <p>
-                I built a Power Apps canvas application integrated with SharePoint as the backend data source. 
-                The application features:
+                I built a Power Apps application connected to SharePoint as the data source. Here's what it does:
             </p>
             
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <h3>Central Repository & Organization</h3>
+                        <h3>One Place for Everything</h3>
                         <p>
-                            All applications are organized by their functional purpose and capabilities. The 
-                            catalog provides a central place where Clarios employees and contractors can find 
-                            the right app for their needs, eliminating the confusion of multiple apps providing 
-                            similar capabilities.
+                            All applications are organized by what they do. Employees and contractors can 
+                            browse or search to find the right app for their needs, instead of guessing or 
+                            asking around.
                         </p>
                     </div>
                 </div>
@@ -114,12 +111,11 @@
                 <div class="feature-item">
                     <div class="feature-number">02</div>
                     <div class="feature-content">
-                        <h3>Advanced Filtering System</h3>
+                        <h3>Flexible Search & Filtering</h3>
                         <p>
-                            Implemented multi-level filtering allowing users to filter across Level 1 and Level 2 
-                            business functionalities. Users can search by name, description, owner, region, and 
-                            functional capabilities. The filtering logic handles complex Boolean operations and 
-                            provides real-time results.
+                            Users can filter by business function, region, owner, or keyword. The filters 
+                            work together so you can narrow down results quickly — for example, finding all 
+                            finance apps available in Europe.
                         </p>
                     </div>
                 </div>
@@ -127,12 +123,11 @@
                 <div class="feature-item">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <h3>Comprehensive Application Details</h3>
+                        <h3>Detailed App Profiles</h3>
                         <p>
-                            Each application has a detailed page showing complete description and context, primary 
-                            and secondary functional classifications (e.g., Financial Management → Financial 
-                            Consolidation & Treasury Management), geographic coverage (Regional or Global), and 
-                            clear visibility of IT and Business owners.
+                            Each application has its own page showing a description, what it's used for, 
+                            where it's available (regional or global), and who the IT and business owners are. 
+                            No more guessing who to contact about an app.
                         </p>
                     </div>
                 </div>
@@ -140,11 +135,11 @@
                 <div class="feature-item">
                     <div class="feature-number">04</div>
                     <div class="feature-content">
-                        <h3>Integrated Access Management</h3>
+                        <h3>Direct Access & Requests</h3>
                         <p>
-                            From the results gallery, users can launch applications directly, request access through 
-                            Clarios@yourservice and Saviynt, or navigate to additional details pages. This integration 
-                            streamlines the entire discovery-to-access workflow.
+                            From the search results, users can launch an app directly, request access through 
+                            the company's ticketing system, or view more details. This cuts out the back-and-forth 
+                            of figuring out how to get started with a tool.
                         </p>
                     </div>
                 </div>
@@ -155,26 +150,26 @@
             <h2>Technical Highlights</h2>
             <div class="technical-details">
                 <div class="detail-item">
-                    <h4>Power Apps Formula Optimization</h4>
+                    <h4>Performance with Large Datasets</h4>
                     <p>
-                        Developed complex formulas for efficient data filtering and search functionality. 
-                        Optimized delegation to handle large datasets without performance degradation.
+                        Wrote optimized formulas to keep search and filtering fast even with hundreds of 
+                        records, working around Power Apps' data limits.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>SharePoint Integration</h4>
+                    <h4>SharePoint Backend</h4>
                     <p>
-                        Designed a normalized SharePoint list structure with proper relationships and lookup 
-                        columns. Implemented custom views and content types for better data organization.
+                        Set up a clean data structure in SharePoint with proper relationships between lists, 
+                        making the data easy to maintain and expand.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>User Experience Design</h4>
+                    <h4>Clean, Consistent Design</h4>
                     <p>
-                        Created intuitive UI components with consistent design patterns. Implemented responsive 
-                        layouts that work across desktop, tablet, and mobile devices.
+                        Designed an intuitive interface that works on desktop, tablet, and mobile so 
+                        employees can access the catalog from anywhere.
                     </p>
                 </div>
             </div>
@@ -198,10 +193,9 @@
             </div>
             
             <p style="margin-top: 2rem;">
-                The Application Catalog has become an essential tool for IT governance at Clarios, 
-                enabling better decision-making around application investments, security compliance, 
-                and license optimization. The centralized system has significantly reduced time spent 
-                searching for application information and improved collaboration between global teams.
+                The Application Catalog is now a go-to tool for IT governance at Clarios. It saves 
+                employees time finding the right applications, helps leadership make better decisions 
+                about software investments, and makes it easier for global teams to collaborate.
             </p>
         </div>
 
@@ -209,21 +203,20 @@
             <h2>Key Learnings</h2>
             <ul class="learning-list">
                 <li>
-                    <strong>Enterprise Scale Complexity:</strong> Working with a global organization taught 
-                    me the importance of designing for scale from day one. Edge cases and regional variations 
-                    need to be considered early in the architecture.
+                    <strong>Design for Scale Early:</strong> Working with a global organization taught 
+                    me to plan for edge cases and regional differences from the start, not as an afterthought.
                 </li>
                 <li>
-                    <strong>Stakeholder Communication:</strong> Regular check-ins with IT teams across different 
-                    time zones required clear documentation and asynchronous communication strategies.
+                    <strong>Communicate Across Time Zones:</strong> Coordinating with IT teams worldwide 
+                    meant writing clear documentation that people could follow without a live meeting.
                 </li>
                 <li>
-                    <strong>Power Platform Best Practices:</strong> Learned advanced Power Apps patterns for 
-                    performance optimization, especially around delegation limits and formula complexity.
+                    <strong>Power Platform Performance:</strong> Learned how to work around Power Apps' 
+                    limitations, especially with large datasets and complex filtering.
                 </li>
                 <li>
-                    <strong>Change Management:</strong> Successfully rolling out new tools requires training, 
-                    documentation, and ongoing support to ensure adoption.
+                    <strong>Adoption Takes Effort:</strong> Building the tool is only half the job — 
+                    training, documentation, and follow-up support are what get people to actually use it.
                 </li>
             </ul>
         </div>

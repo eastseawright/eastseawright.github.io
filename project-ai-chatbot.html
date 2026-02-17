@@ -23,9 +23,9 @@
             <span class="project-category">AI & Machine Learning</span>
             <h1 class="project-title">AI Battery Assistant Chatbot</h1>
             <p class="project-intro">
-                An intelligent conversational AI system built with Microsoft Copilot Studio that helps 
-                customers instantly find battery specifications and product information, informed by 
-                user journey analytics to optimize the knowledge base.
+                An AI chatbot built with Microsoft Copilot Studio that helps customers instantly find 
+                battery warranty and product information. Instead of searching through web pages for 5+ minutes, 
+                customers get a specific answer in about 20 seconds.
             </p>
             
             <div class="project-meta">
@@ -52,15 +52,13 @@
         <div class="content-section">
             <h2>Overview</h2>
             <p>
-                Customers visiting Clarios' Optima battery website struggled to find warranty information and 
-                battery specifications. The original user journey was 5+ minutes long with excessive clicks, 
-                often ending at a generic contact page without answers. This friction impacted customer confidence, 
-                ease of access, and ultimately sales.
+                Customers visiting Clarios' Optima battery website had a hard time finding warranty information. 
+                The process took 5+ minutes of clicking through pages, and most people ended up on a generic 
+                contact page without an answer. That frustration was costing the company sales.
             </p>
             <p>
-                I developed an AI-powered chatbot using Microsoft Copilot Studio that reduced the warranty 
-                identification journey from 5 minutes to 20 seconds, providing instant, specific warranty 
-                information based on users' exact needs.
+                I built an AI chatbot that gives customers specific warranty answers in about 20 seconds — 
+                a 93% reduction in lookup time.
             </p>
         </div>
 
@@ -68,19 +66,19 @@
             <h2>The Problem</h2>
             <div class="challenge-grid">
                 <div class="challenge-card">
-                    <h3>Lengthy User Journey</h3>
-                    <p>Finding warranty information required 5+ minutes of navigation through multiple pages, 
-                    resulting in user frustration and drop-off.</p>
+                    <h3>Too Many Clicks</h3>
+                    <p>Finding warranty info took 5+ minutes of navigating through multiple pages, causing 
+                    frustration and drop-off.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Poor Accessibility</h3>
-                    <p>Critical warranty details were buried deep in documentation, making it difficult for 
-                    customers to verify coverage before purchase.</p>
+                    <h3>Hard to Find Answers</h3>
+                    <p>Important warranty details were buried deep in documentation that most customers 
+                    never found.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Lost Sales Opportunities</h3>
-                    <p>Customers unable to quickly confirm warranty details often abandoned purchases or contacted 
-                    competitors with more accessible information.</p>
+                    <h3>Lost Sales</h3>
+                    <p>Customers who couldn't quickly confirm warranty coverage often gave up or went 
+                    to a competitor.</p>
                 </div>
             </div>
         </div>
@@ -92,12 +90,11 @@
                 <div class="feature-item">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <h3>Warranty Information Prioritization</h3>
+                        <h3>Warranty Info Front and Center</h3>
                         <p>
-                            Focused the chatbot's primary purpose on making battery and charger warranties easily 
-                            accessible. The bot helps users find exact warranty information for specific products 
-                            and use cases, prioritizing this critical information that directly impacts purchase 
-                            decisions and customer confidence.
+                            Made warranty information the chatbot's #1 priority since that's what customers 
+                            were struggling to find. The bot helps users get exact warranty details for their 
+                            specific product, which directly impacts purchase decisions.
                         </p>
                     </div>
                 </div>
@@ -105,11 +102,11 @@
                 <div class="feature-item">
                     <div class="feature-number">02</div>
                     <div class="feature-content">
-                        <h3>Natural Language Processing</h3>
+                        <h3>Plain English Conversations</h3>
                         <p>
-                            Built using Microsoft Copilot Studio to ensure user-friendly, conversational interaction. 
-                            Customers can ask questions in plain English like "What's the warranty on the Optima 
-                            RedTop?" and get instant, specific answers rather than generic contact information.
+                            Built with Microsoft Copilot Studio so customers can ask questions naturally — 
+                            like "What's the warranty on the Optima RedTop?" — and get a specific answer 
+                            instead of being sent to a generic contact page.
                         </p>
                     </div>
                 </div>
@@ -117,12 +114,11 @@
                 <div class="feature-item">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <h3>Data-Driven Knowledge Base</h3>
+                        <h3>Built Around Real Customer Questions</h3>
                         <p>
-                            Uploaded warranty manuals and user guides to the bot's knowledge base. Used Google 
-                            Analytics to identify popular searches and prioritize topics based on common customer 
-                            queries, ensuring the bot could answer the questions customers actually asked most 
-                            frequently.
+                            Uploaded warranty manuals and product guides to the bot's knowledge base. Used 
+                            Google Analytics to find out what customers actually searched for most, then 
+                            prioritized those topics so the bot could handle the most common questions first.
                         </p>
                     </div>
                 </div>
@@ -130,11 +126,10 @@
                 <div class="feature-item">
                     <div class="feature-number">04</div>
                     <div class="feature-content">
-                        <h3>Brand-Aligned Interface</h3>
+                        <h3>On-Brand Design</h3>
                         <p>
-                            Designed a simple, intuitive Optima Bot icon that aligns with Clarios' brand identity. 
-                            The interface is clean and accessible, making it easy for customers to engage with the 
-                            bot immediately upon visiting the site.
+                            Designed a clean bot icon and chat interface that matches Clarios' brand. The 
+                            goal was to make it feel like a natural part of the website, not an intrusive pop-up.
                         </p>
                     </div>
                 </div>
@@ -145,26 +140,27 @@
             <h2>Technical Implementation</h2>
             <div class="technical-details">
                 <div class="detail-item">
-                    <h4>Conversational Design</h4>
+                    <h4>Conversation Design</h4>
                     <p>
-                        Created dialogue flows that feel natural and helpful, not robotic. Designed prompts 
-                        that guide users while allowing flexibility in how they phrase questions.
+                        Created dialogue flows that feel natural and helpful. Designed prompts that guide 
+                        users while letting them phrase questions however they want.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>Knowledge Base Architecture</h4>
+                    <h4>Knowledge Base Setup</h4>
                     <p>
-                        Structured product data and FAQs in a way optimized for LLM retrieval. Implemented 
-                        metadata tagging and semantic relationships to improve answer relevance.
+                        Organized product data and FAQs so the AI can find the right answer quickly. 
+                        Tagged content with relevant categories to improve accuracy.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>Analytics Integration</h4>
+                    <h4>User Behavior Analysis</h4>
                     <p>
-                        Connected Hotjar session recordings and heatmaps to identify where users struggled 
-                        in their journey. This qualitative data drove knowledge base prioritization decisions.
+                        Used Hotjar session recordings and heatmaps to see exactly where customers got 
+                        stuck on the website. That real user data guided which topics to prioritize in 
+                        the chatbot.
                     </p>
                 </div>
             </div>
@@ -188,11 +184,10 @@
             </div>
             
             <p style="margin-top: 2rem;">
-                The chatbot transformed the customer experience by reducing warranty identification time from 
-                5+ minutes with excessive clicks to just 20 seconds with instant, specific answers. This 
-                improvement directly enhanced customer confidence, increased sales conversion, and provided 
-                better ease of access to critical product information. The bot outputs warranty information 
-                tailored to users' specific needs rather than directing them to generic contact pages.
+                The chatbot turned a frustrating 5-minute search into a 20-second conversation. Customers 
+                now get specific warranty answers for their exact product instead of landing on a generic 
+                contact page. This directly improved customer confidence and made it easier for people to 
+                make purchase decisions.
             </p>
         </div>
 
@@ -200,20 +195,20 @@
             <h2>Key Learnings</h2>
             <ul class="learning-list">
                 <li>
-                    <strong>User Research is Critical:</strong> Hotjar analytics revealed customer needs that 
-                    weren't obvious from product data alone. Real user behavior should drive AI training priorities.
+                    <strong>Watch Real Users First:</strong> Hotjar analytics showed customer needs that 
+                    weren't obvious from product data alone. Real behavior should drive what the AI learns.
                 </li>
                 <li>
-                    <strong>Conversation Design Complexity:</strong> Creating natural dialogue flows requires 
-                    anticipating many edge cases and gracefully handling ambiguous queries.
+                    <strong>Conversation Design Is Hard:</strong> Writing natural dialogue flows means 
+                    anticipating dozens of edge cases and handling vague questions gracefully.
                 </li>
                 <li>
-                    <strong>Continuous Improvement:</strong> LLM-based chatbots improve over time with more data. 
-                    Built systems to monitor unsuccessful queries and expand the knowledge base accordingly.
+                    <strong>Keep Improving:</strong> The chatbot gets better with more data. I built 
+                    tracking to catch failed queries and expand the knowledge base over time.
                 </li>
                 <li>
-                    <strong>Trust Through Transparency:</strong> Users appreciated when the bot acknowledged 
-                    limitations and offered human handoff rather than providing uncertain answers.
+                    <strong>Be Honest About Limits:</strong> Users trusted the bot more when it admitted 
+                    it didn't know something and offered to connect them with a person.
                 </li>
             </ul>
         </div>

@@ -23,9 +23,9 @@
             <span class="project-category">AI & Cloud Architecture</span>
             <h1 class="project-title">YouTube Comment Sentiment Analysis</h1>
             <p class="project-intro">
-                End-to-end cloud solution leveraging Azure services to transform unstructured YouTube comments 
-                into actionable business intelligence for Optima batteries. Built a complete data pipeline from 
-                comment retrieval through AI analysis to Power BI visualization.
+                An automated system that collects YouTube comments from Optima battery videos, 
+                analyzes customer sentiment using Azure AI, and displays the results in a Power BI 
+                dashboard — turning thousands of unread comments into useful business insights.
             </p>
             
             <div class="project-meta">
@@ -54,15 +54,14 @@
         <div class="content-section">
             <h2>Project Overview</h2>
             <p>
-                Customer feedback on YouTube provides valuable insights into product performance, user 
-                satisfaction, and emerging issues. However, this unstructured feedback was previously 
-                untapped—thousands of comments containing rich sentiment data that could inform product 
-                development and marketing strategies.
+                Optima battery videos on YouTube have thousands of comments — real customers sharing 
+                what they like, what they don't, and what they wish was different. But nobody at the 
+                company was reading them in any organized way.
             </p>
             <p>
-                I architected and built a complete cloud-based sentiment analysis pipeline that automatically 
-                retrieves YouTube comments from Optima battery videos, analyzes sentiment using Azure AI, 
-                stores results in a scalable database, and visualizes insights through Power BI dashboards.
+                I built a cloud-based system that automatically pulls in those comments, uses AI to 
+                classify them as positive, negative, or neutral, and shows the trends in a dashboard 
+                the marketing and product teams can actually use.
             </p>
         </div>
 
@@ -70,19 +69,19 @@
             <h2>Business Value</h2>
             <div class="challenge-grid">
                 <div class="challenge-card">
-                    <h3>Gain Customer Insight</h3>
-                    <p>Identify trends in consumer needs, preferences, and pain points directly from authentic 
-                    user feedback.</p>
+                    <h3>Understand Customers</h3>
+                    <p>See what real customers are saying about the product — what they love, 
+                    what frustrates them, and what they want improved.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Aid Product Development</h3>
-                    <p>Use sentiment analysis to inform product improvements, feature prioritization, and 
-                    quality initiatives.</p>
+                    <h3>Improve Products</h3>
+                    <p>Use customer feedback trends to guide product improvements and decide 
+                    what to focus on next.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Monitor Brand Perception</h3>
-                    <p>Track how customers feel about Optima batteries over time and identify emerging issues 
-                    before they escalate.</p>
+                    <h3>Track Brand Perception</h3>
+                    <p>Monitor how customers feel about Optima batteries over time and catch 
+                    problems before they grow.</p>
                 </div>
             </div>
         </div>
@@ -94,12 +93,11 @@
                 <div class="feature-item">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <h3>YouTube Comment Retrieval</h3>
+                        <h3>Pull in YouTube Comments</h3>
                         <p>
-                            Built an Azure Function App that connects to YouTube's API to automatically retrieve 
-                            comments from Optima battery video playlists. Configured the function with API keys 
-                            and playlist URLs, implementing logic to specify how to extract comments efficiently. 
-                            Organized comment data into structured format for downstream processing.
+                            Built an Azure Function that connects to YouTube's API and automatically 
+                            collects comments from Optima battery video playlists. The function organizes 
+                            the raw comment data into a clean format for the next step.
                         </p>
                     </div>
                 </div>
@@ -107,13 +105,12 @@
                 <div class="feature-item">
                     <div class="feature-number">02</div>
                     <div class="feature-content">
-                        <h3>Azure Language Service Integration</h3>
+                        <h3>Analyze Sentiment with AI</h3>
                         <p>
-                            Connected Azure Cognitive Services Language API to analyze each comment's sentiment. 
-                            The service classifies comments as positive, neutral, negative, or mixed, providing 
-                            confidence scores for each classification. Implemented opinion mining to extract 
-                            specific aspects of feedback (e.g., battery life, durability, price) and their 
-                            associated sentiments.
+                            Connected Azure's Language AI service to classify each comment as positive, 
+                            neutral, negative, or mixed, with confidence scores. The AI also picks out 
+                            specific topics people mention — like battery life, durability, or price — 
+                            and how they feel about each one.
                         </p>
                     </div>
                 </div>
@@ -121,12 +118,11 @@
                 <div class="feature-item">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <h3>Cosmos DB Storage</h3>
+                        <h3>Store Results in Cosmos DB</h3>
                         <p>
-                            Moved enriched comments from the Function App to Cosmos DB, a globally distributed, 
-                            multi-model database. Cosmos DB provides scalable, efficient data storage that can 
-                            handle growing volumes of comments while maintaining fast query performance for 
-                            analysis and reporting.
+                            All the analyzed comments get stored in Cosmos DB, a cloud database that can 
+                            handle growing volumes of data while keeping queries fast. As more comments come 
+                            in over time, the system scales automatically.
                         </p>
                     </div>
                 </div>
@@ -134,12 +130,11 @@
                 <div class="feature-item">
                     <div class="feature-number">04</div>
                     <div class="feature-content">
-                        <h3>Power BI Visualization</h3>
+                        <h3>Visualize in Power BI</h3>
                         <p>
-                            Created comprehensive Power BI dashboards that connect to Cosmos DB to visualize 
-                            sentiment trends over time, identify common topics in feedback, track sentiment 
-                            distribution, and highlight influential comments. Stakeholders can filter by date 
-                            range, product model, or sentiment type to drill into specific insights.
+                            Created dashboards that show sentiment trends over time, common topics in 
+                            feedback, and notable comments. Stakeholders can filter by date, product model, 
+                            or sentiment type to dig into specific questions.
                         </p>
                     </div>
                 </div>
@@ -150,38 +145,34 @@
             <h2>Technical Architecture</h2>
             <div class="technical-details">
                 <div class="detail-item">
-                    <h4>Serverless Architecture</h4>
+                    <h4>Runs on Its Own</h4>
                     <p>
-                        Used Azure Functions for serverless compute, eliminating infrastructure management and 
-                        enabling automatic scaling. Functions trigger on schedule or API calls to retrieve and 
-                        process comments continuously.
+                        Used Azure Functions so there's no server to manage. The system runs on a schedule 
+                        to pull and process new comments automatically.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>AI-Powered Analysis</h4>
+                    <h4>Pre-Built AI Models</h4>
                     <p>
-                        Leveraged Azure Cognitive Services' pre-trained language models for sentiment analysis, 
-                        avoiding the need to train custom models. Opinion mining extracts granular insights 
-                        about specific product features mentioned in comments.
+                        Used Azure's pre-trained language models instead of building a custom one from scratch. 
+                        The AI identifies not just overall sentiment but specific product features people mention.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>Scalable Data Storage</h4>
+                    <h4>Flexible Database</h4>
                     <p>
-                        Cosmos DB's NoSQL architecture handles unstructured comment data naturally while 
-                        providing global distribution and automatic indexing for fast queries as data volume 
-                        grows.
+                        Cosmos DB handles the varied structure of YouTube comments naturally and automatically 
+                        indexes everything so queries stay fast as data grows.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>End-to-End Pipeline</h4>
+                    <h4>Complete Data Flow</h4>
                     <p>
-                        Designed a complete data pipeline using Python to orchestrate retrieval, analysis, and 
-                        storage. Error handling and logging ensure reliability, while modular design enables 
-                        easy extension to other data sources.
+                        Built the entire pipeline in Python — from pulling comments, to running AI analysis, 
+                        to storing results. Includes error handling and logging so issues are easy to diagnose.
                     </p>
                 </div>
             </div>
@@ -191,31 +182,28 @@
             <h2>Skills & Technologies</h2>
             <ul class="learning-list">
                 <li>
-                    <strong>Cloud Architecture:</strong> Designed and implemented a complete cloud-based data 
-                    pipeline using Azure services, understanding how different components integrate to create 
-                    scalable solutions.
+                    <strong>Cloud Architecture:</strong> Designed and connected multiple Azure services into 
+                    a working system, learning how different cloud components fit together.
                 </li>
                 <li>
-                    <strong>AI & Machine Learning:</strong> Practical application of AI for sentiment analysis 
-                    and opinion mining. Learned how to leverage pre-trained models effectively and interpret 
-                    confidence scores.
+                    <strong>AI in Practice:</strong> Applied AI for sentiment analysis and topic extraction. 
+                    Learned how to use pre-trained models effectively and interpret confidence scores.
                 </li>
                 <li>
-                    <strong>Data Engineering:</strong> Built ETL (Extract, Transform, Load) processes to move 
-                    data through the pipeline. Worked with APIs, NoSQL databases, and data transformation logic.
+                    <strong>Data Engineering:</strong> Built the full data flow — pulling from an API, 
+                    transforming data, and loading it into a database for reporting.
                 </li>
                 <li>
-                    <strong>Business Intelligence:</strong> Created Power BI visualizations that translate raw 
-                    sentiment data into actionable business insights. Learned to design dashboards that tell 
-                    compelling data stories.
+                    <strong>Dashboard Design:</strong> Created Power BI dashboards that turn raw sentiment 
+                    data into clear, useful insights for non-technical stakeholders.
                 </li>
                 <li>
-                    <strong>Python Development:</strong> Used Python to connect cloud services, orchestrate 
-                    workflows, and implement business logic for comment processing and analysis.
+                    <strong>Python Development:</strong> Used Python to connect cloud services, run workflows, 
+                    and handle the logic for processing and analyzing comments.
                 </li>
                 <li>
-                    <strong>Customer Analytics:</strong> Integrated Hotjar and Google Analytics to understand 
-                    user behavior and inform decisions about UX improvements based on actual usage patterns.
+                    <strong>User Analytics:</strong> Used Hotjar and Google Analytics to understand website 
+                    visitor behavior and make informed decisions about UX improvements.
                 </li>
             </ul>
         </div>
@@ -238,12 +226,10 @@
             </div>
             
             <p style="margin-top: 2rem;">
-                This project demonstrated how AI and cloud technologies can transform unstructured customer 
-                feedback into structured business intelligence. The automated pipeline eliminates manual 
-                comment analysis while providing continuous insights into customer sentiment, enabling 
-                data-driven decisions about product development, marketing strategies, and customer service 
-                priorities. The solution showcases the practical business impact of combining AI, cloud 
-                infrastructure, and data visualization to solve real business problems.
+                This project showed how AI and cloud tools can turn customer feedback that nobody was 
+                reading into organized insights the team can act on. The automated system replaces 
+                manual comment reviews and gives the product and marketing teams a running view of 
+                how customers feel about Optima batteries.
             </p>
         </div>
 
