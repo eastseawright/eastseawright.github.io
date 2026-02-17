@@ -88,8 +88,8 @@ body {
 }
 
 .logo-img {
-    height: 76px;
-    width: auto;
+    height: 56px;
+    width: 76px;
     display: block;
     transition: opacity 0.3s ease;
 }
