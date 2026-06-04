@@ -25,28 +25,31 @@
             <span class="project-category">Enterprise Application Development</span>
             <h1 class="project-title">Application Catalog</h1>
             <p class="project-intro">
-                A searchable directory for all of Clarios' business applications, built with Microsoft Power Apps. 
-                Employees can quickly find the right tool for their job, see who owns it, and request access — 
-                all in one place.
+                A company-wide searchable directory for 900+ business applications built with Microsoft 
+                Power Apps and SharePoint. Employees across 7 global regions can find the right tool, 
+                see ownership details, and request access - all from one place.
             </p>
             
             <div class="project-meta">
                 <div class="meta-item">
                     <span class="meta-label">Role</span>
-                    <span class="meta-value">UX/UI Applications Intern</span>
+                    <span class="meta-value">UX/UI Applications & Data Analytics Intern</span>
                 </div>
-
                 <div class="meta-item">
                     <span class="meta-label">Company</span>
                     <span class="meta-value">Clarios</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Scale</span>
+                    <span class="meta-value">900+ Apps, 7 Global Regions</span>
                 </div>
             </div>
             
             <div class="tech-stack">
                 <span class="tech-tag">Microsoft Power Apps</span>
                 <span class="tech-tag">SharePoint</span>
+                <span class="tech-tag">Power Fx</span>
                 <span class="tech-tag">Power Automate</span>
-                <span class="tech-tag">Enterprise Architecture</span>
             </div>
         </div>
     </section>
@@ -57,53 +60,52 @@
             <h2>Overview</h2>
             <p>
                 Clarios had no central place to view the 900+ applications used across 7 global regions. 
-                Multiple apps were doing the same thing, and nobody had a clear picture of who owned what 
-                or where it was available. Teams wasted time searching for the right tool or accidentally 
-                building something that already existed.
+                Multiple apps were duplicating the same capabilities, and nobody had a clear picture of 
+                who owned what or where it was available. Teams wasted time searching for the right tool 
+                or accidentally building something that already existed.
             </p>
             <p>
                 I designed and built an Application Catalog using Microsoft Power Apps that serves as the 
-                single source for all business applications. It sits at the front of the Global 
+                single source of truth for all business applications. It lives at the front of the Global 
                 Application SharePoint site so anyone in the company can find what they need.
             </p>
         </div>
 
         <div class="content-section">
-            <h2>The Challenge</h2>
+            <h2>The Problem</h2>
             <div class="challenge-grid">
                 <div class="challenge-card">
-                    <h3>Scattered Information</h3>
-                    <p>Application data lived in different spreadsheets and systems, so nobody had a 
-                    complete picture of what tools were available.</p>
+                    <h3>No Single Source of Truth</h3>
+                    <p>Application data was scattered across spreadsheets and systems. Nobody had a 
+                    complete picture of what tools were available or who was responsible for them.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Different Needs by Role</h3>
-                    <p>Different teams and regions needed to see and filter applications differently 
-                    based on their specific responsibilities.</p>
+                    <h3>Redundant Software Spend</h3>
+                    <p>Without visibility, teams were building or buying tools that already existed 
+                    elsewhere in the organization.</p>
                 </div>
                 <div class="challenge-card">
-                    <h3>Growing Scale</h3>
-                    <p>The solution needed to handle hundreds of applications today and keep working 
-                    as the company adds more across new regions.</p>
+                    <h3>No Clear Access Path</h3>
+                    <p>Employees had no way to know how to request access to a tool, who to contact, 
+                    or what the process was - leading to back-and-forth emails and delays.</p>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>Solution & Implementation</h2>
-            <p>
-                I built a Power Apps application connected to SharePoint as the data source. Here's what it does:
-            </p>
+            <h2>What I Built</h2>
             
             <div class="feature-list">
                 <div class="feature-item">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <h3>One Place for Everything</h3>
+                        <h3>Advanced Filtering System</h3>
                         <p>
-                            All applications are organized by what they do. Employees and contractors can 
-                            browse or search to find the right app for their needs, instead of guessing or 
-                            asking around.
+                            Built a sidebar filter system with 6 distinct filter modes: Business Function, 
+                            Business SME, IT Application Owner, Vendor, Business Capability, and Coverage 
+                            Regions. Filters work together so users can combine criteria - for example, 
+                            finding all finance apps available in Europe owned by a specific IT lead. 
+                            All filters integrate with a live search bar and clear together when switching modes.
                         </p>
                     </div>
                 </div>
@@ -111,11 +113,12 @@
                 <div class="feature-item">
                     <div class="feature-number">02</div>
                     <div class="feature-content">
-                        <h3>Flexible Search & Filtering</h3>
+                        <h3>Recently Viewed History</h3>
                         <p>
-                            Users can filter by business function, region, owner, or keyword. The filters 
-                            work together so you can narrow down results quickly — for example, finding all 
-                            finance apps available in Europe.
+                            Implemented a Recently Viewed feature backed by a dedicated SharePoint list 
+                            (AFT Recently Viewed) that logs each user's app interactions with timestamps. 
+                            The catalog surfaces your most recently accessed apps sorted by viewed date, 
+                            making it fast to return to tools you use regularly.
                         </p>
                     </div>
                 </div>
@@ -123,11 +126,14 @@
                 <div class="feature-item">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <h3>Detailed App Profiles</h3>
+                        <h3>Request Access Workflow</h3>
                         <p>
-                            Each application has its own page showing a description, what it's used for, 
-                            where it's available (regional or global), and who the IT and business owners are. 
-                            No more guessing who to contact about an app.
+                            Designed a conditional access request system driven by a Request_Process field 
+                            with 5 distinct scenarios: Saviynt form, SNOW ticket, direct email, instruction 
+                            document, or other. Each app card and detail page surfaces the correct access 
+                            path for that specific application - clicking a request email opens a pre-addressed 
+                            email, clicking a Saviynt link opens the correct form, and instruction documents 
+                            open the relevant guide. No more guessing how to get access.
                         </p>
                     </div>
                 </div>
@@ -135,11 +141,12 @@
                 <div class="feature-item">
                     <div class="feature-number">04</div>
                     <div class="feature-content">
-                        <h3>Direct Access & Requests</h3>
+                        <h3>Detailed Application Profiles</h3>
                         <p>
-                            From the search results, users can launch an app directly, request access through 
-                            the company's ticketing system, or view more details. This cuts out the back-and-forth 
-                            of figuring out how to get started with a tool.
+                            Each application has its own detail page showing a full description, primary and 
+                            secondary business function classifications, geographic coverage (regional or global), 
+                            IT and business owner contacts, and vendor information. Users can launch the app 
+                            directly from the catalog or navigate to all access options from one screen.
                         </p>
                     </div>
                 </div>
@@ -147,94 +154,70 @@
         </div>
 
         <div class="content-section">
-            <h2>Technical Highlights</h2>
+            <h2>Technical Details</h2>
             <div class="technical-details">
                 <div class="detail-item">
-                    <h4>Performance with Large Datasets</h4>
+                    <h4>Power Fx Formula Optimization</h4>
                     <p>
-                        Wrote optimized formulas to keep search and filtering fast even with hundreds of 
-                        records, working around Power Apps' data limits.
+                        Written optimized Power Fx formulas to keep search and filtering responsive across 
+                        900+ records. Worked around Power Apps delegation limits by structuring queries 
+                        carefully to avoid performance degradation at scale.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>SharePoint Backend</h4>
+                    <h4>SharePoint Data Architecture</h4>
                     <p>
-                        Set up a clean data structure in SharePoint with proper relationships between lists, 
-                        making the data easy to maintain and expand.
+                        Backend uses two SharePoint lists: the main AFT catalog list with fields for 
+                        multi-choice business functions, person fields for IT and business leads, hyperlink 
+                        fields for access instructions, and choice fields for request process type. A second 
+                        AFT Recently Viewed list tracks user history with timestamps for the Recently Viewed feature.
                     </p>
                 </div>
                 
                 <div class="detail-item">
-                    <h4>Clean, Consistent Design</h4>
+                    <h4>Conditional UI Logic</h4>
                     <p>
-                        Designed an intuitive interface that works on desktop, tablet, and mobile so 
-                        employees can access the catalog from anywhere.
+                        App cards and detail pages use conditional visibility logic tied to Request_Process 
+                        values so the correct access buttons appear automatically for each application without 
+                        any manual configuration per app.
                     </p>
                 </div>
             </div>
         </div>
-     
 
         <div class="content-section">
-            <h2>Impact & Results</h2><!--
+            <h2>Impact</h2>
             <div class="impact-grid">
                 <div class="impact-stat">
-                    <div class="impact-number">300+</div>
+                    <div class="impact-number">900+</div>
                     <div class="impact-label">Applications Cataloged</div>
                 </div>
                 <div class="impact-stat">
-                    <div class="impact-number">12</div>
-                    <div class="impact-label">Global Regions Supported</div>
+                    <div class="impact-number">7</div>
+                    <div class="impact-label">Global Regions</div>
                 </div>
                 <div class="impact-stat">
-                    <div class="impact-number">50+</div>
-                    <div class="impact-label">Active Users</div>
+                    <div class="impact-number">6</div>
+                    <div class="impact-label">Filter Modes</div>
                 </div>
             </div>
-            -->
             
             <p style="margin-top: 2rem;">
-                The Application Catalog is now a go-to tool for IT governance at Clarios. It saves 
-                employees time finding the right applications, helps leadership make better decisions 
-                about software investments, and makes it easier for global teams to collaborate.
+                The Application Catalog became the go-to tool for IT governance at Clarios. It gave 
+                leadership visibility into the full application portfolio, reduced redundant software 
+                spend, and gave every employee a clear path to find and access the tools they need. 
+                The request access workflow alone eliminated significant back-and-forth between employees 
+                and IT teams across all 7 regions.
             </p>
         </div>
-
-        <!--
-        <div class="content-section">
-            <h2>Key Learnings</h2>
-            <ul class="learning-list">
-                <li>
-                    <strong>Design for Scale Early:</strong> Working with a global organization taught 
-                    me to plan for edge cases and regional differences from the start, not as an afterthought.
-                </li>
-                <li>
-                    <strong>Communicate Across Time Zones:</strong> Coordinating with IT teams worldwide 
-                    meant writing clear documentation that people could follow without a live meeting.
-                </li>
-                <li>
-                    <strong>Power Platform Performance:</strong> Learned how to work around Power Apps' 
-                    limitations, especially with large datasets and complex filtering.
-                </li>
-                <li>
-                    <strong>Adoption Takes Effort:</strong> Building the tool is only half the job — 
-                    training, documentation, and follow-up support are what get people to actually use it.
-                </li>
-            </ul>
-        </div>
-        -->
 
         <!-- Presentation Embed Section -->
         <div class="content-section presentation-section">
             <h2>Project Presentation</h2>
-            
-            
-        <!-- Presentation embed code -->
             <div class="presentation-embed">
                 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQa8wX5BlC2FHhONji-FYgE6EonhMMhv0i6XdoFVkIbXMabq9xlxVwAHjBCjtpO8Q/pubembed?start=true&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
-            
         </div>
     </section>
 
