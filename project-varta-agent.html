@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARTA AI Agent | East Seawright</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo"><img src="ES_Logo.png" alt="ES" class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html#projects">← Back to Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <span class="project-category">AI Agent Development</span>
+            <h1 class="project-title">VARTA AI Customer Agent</h1>
+            <p class="project-intro">
+                A consumer-facing AI agent built for the VARTA automotive battery brand and embedded 
+                directly into their public website. Designed to handle customer inquiries for the 
+                European and DACH market in both English and German, with a projected $35,000 in 
+                annual savings by reducing reliance on a third-party call center vendor.
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">UX/UI Applications & Data Analytics Intern</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Company</span>
+                    <span class="meta-value">Clarios</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Market</span>
+                    <span class="meta-value">Europe / DACH Region</span>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Microsoft Copilot Studio</span>
+                <span class="tech-tag">Sitefinity CMS</span>
+                <span class="tech-tag">Power Automate</span>
+                <span class="tech-tag">Azure Blob Storage</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>
+                VARTA, one of Clarios' major European battery brands, was relying on a third-party 
+                vendor called PVS to handle customer inquiries for the DACH region via a phone hotline. 
+                That vendor relationship cost approximately $40,000 per year to cover product questions, 
+                warranty inquiries, and workshop support.
+            </p>
+            <p>
+                I built a Copilot Studio AI agent embedded directly into the VARTA website to handle 
+                these inquiries automatically. The agent supports customers in English and German, can 
+                decode battery manufacturing codes, and escalates complex issues to a VARTA specialist 
+                via email. At an estimated $400 per month to run, the agent represents roughly $35,000 
+                in projected annual savings compared to the existing vendor contract.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>The Problem</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>High Vendor Cost</h3>
+                    <p>The third-party PVS hotline cost ~$40,000 per year to handle inquiries that 
+                    an AI agent could resolve automatically at a fraction of the cost.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Multilingual Market</h3>
+                    <p>The DACH region requires both English and German support, creating complexity 
+                    for a single agent to serve all customers seamlessly.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>External Deployment Complexity</h3>
+                    <p>Embedding a Microsoft-hosted AI agent into a third-party CMS (Sitefinity) 
+                    introduced security and browser policy challenges that had to be solved before 
+                    anything could go live.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>What I Built</h2>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>Custom Embedded Chat Widget</h3>
+                        <p>
+                            Built a custom JavaScript chat widget from scratch rather than using the 
+                            default Copilot Studio embed. The widget uses a floating toggle button with 
+                            VARTA-branded icons hosted in Azure Blob Storage. When a user opens the chat, 
+                            the VARTA logo icon transitions to a downward arrow indicating it can be 
+                            clicked again to close - with smooth CSS cubic-bezier animations on open and 
+                            close for a polished feel. The widget was designed to match VARTA's brand 
+                            identity while keeping the experience intuitive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>CSP Blocking Resolution</h3>
+                        <p>
+                            When first deploying the widget into Sitefinity, the chat interface failed 
+                            to load due to Content Security Policy (CSP) restrictions blocking 
+                            Microsoft-hosted domains. I identified the specific domains causing the 
+                            block and worked with the web admin to whitelist them in the correct sequence: 
+                            first <code>cdn.botframework.com</code> for the WebChat library, then 
+                            <code>*.api.powerplatform.com</code> for the Copilot Studio token endpoint. 
+                            Solving this unblocked the entire deployment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>English / German Auto-Detection</h3>
+                        <p>
+                            Configured the agent to automatically detect whether a user is writing in 
+                            English or German and respond in the same language - all handled through 
+                            system instructions in Copilot Studio without any manual language switching 
+                            required from the user. This was critical for serving VARTA's DACH customer 
+                            base naturally.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">04</div>
+                    <div class="feature-content">
+                        <h3>Battery Manufacturing Code Decoder</h3>
+                        <p>
+                            Built a feature that lets customers type a 13-digit battery code directly 
+                            into the chat and receive the manufacturing month and year decoded from it. 
+                            The decoding logic was written in Python and runs inside a Copilot Studio 
+                            prompt tool - the agent passes the code to the tool, the Python processes 
+                            it, and the result is returned inline in the conversation. This gives 
+                            customers instant answers to a question that previously required calling 
+                            the support hotline.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">05</div>
+                    <div class="feature-content">
+                        <h3>Specialist Escalation Flow</h3>
+                        <p>
+                            Designed a Power Automate escalation flow that triggers when the agent 
+                            cannot resolve a customer's inquiry. The flow sends a structured email to 
+                            the VARTA specialist contact with the customer's issue details for follow-up. 
+                            Pending a final admin configuration to enable anonymous external users to 
+                            trigger the Send an Email V2 action without Microsoft OAuth authentication.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">06</div>
+                    <div class="feature-content">
+                        <h3>Dev-to-Prod Deployment Pipeline</h3>
+                        <p>
+                            Set up a structured deployment pipeline using Power Platform solutions to 
+                            manage the promotion of agent updates from the development environment to 
+                            production safely. This ensures changes can be tested and validated before 
+                            reaching the live customer-facing site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical Details</h2>
+            <div class="technical-details">
+                <div class="detail-item">
+                    <h4>Python in Copilot Studio Prompt Tools</h4>
+                    <p>
+                        The battery code decoder uses Python running inside a Copilot Studio prompt 
+                        tool - an approach that keeps the logic self-contained within the agent without 
+                        requiring an external Azure Function or API call. The agent passes the 13-digit 
+                        code as input, the Python extracts the manufacturing date, and the result feeds 
+                        directly back into the conversation.
+                    </p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Azure Blob Storage for Brand Assets</h4>
+                    <p>
+                        VARTA-branded icons for both the floating button and the in-chat bot avatar 
+                        are hosted in Azure Blob Storage. Using Azure Blob kept the assets on 
+                        Microsoft-controlled infrastructure, avoiding additional CSP domain issues 
+                        that would have occurred with third-party image hosting.
+                    </p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>Generative Orchestration Mode</h4>
+                    <p>
+                        The agent was designed to use Copilot Studio's generative orchestration mode 
+                        rather than rigid predefined topic flows. This lets the agent reason about 
+                        which capability to invoke based on what the user says, making conversations 
+                        feel natural rather than scripted.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Business Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-stat">
+                    <div class="impact-number">$35K</div>
+                    <div class="impact-label">Projected Annual Savings</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">2</div>
+                    <div class="impact-label">Languages Supported</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">~$400</div>
+                    <div class="impact-label">Estimated Monthly Cost</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+                The VARTA agent replaces a $40,000/year third-party vendor hotline with an AI-powered 
+                solution running at approximately $400/month. Beyond cost savings, the agent gives 
+                VARTA customers instant answers in their preferred language at any time of day - 
+                without waiting on hold. The battery code decoder alone handles a question type 
+                that previously required a specialist phone call. The agent was in QA staging at 
+                the end of the internship with a production deployment pipeline in place.
+            </p>
+        </div>
+
+        <!-- Presentation Embed Section -->
+        <div class="content-section presentation-section">
+            <h2>Project Presentation</h2>
+            <div class="presentation-placeholder">
+                <div class="placeholder-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="9"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    <p>Project Presentation</p>
+                    <span>Embed coming soon</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="project-nav">
+        <a href="project-app-catalog.html" class="nav-button">
+            <span>← Previous: Application Catalog</span>
+        </a>
+        <a href="project-ai-chatbot.html" class="nav-button">
+            <span>Next: AI Battery Assistant →</span>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; East Seawright. Ode to iteration_</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
