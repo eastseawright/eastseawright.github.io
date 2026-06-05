@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira KT Bot | East Seawright</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo"><img src="ES_Logo.png" alt="ES" class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html#projects">← Back to Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <span class="project-category">AI Agent Development</span>
+            <h1 class="project-title">Jira KT Bot</h1>
+            <p class="project-intro">
+                An internal AI agent built for the Clarios IT and development teams to query Jira 
+                project data using natural language. Instead of navigating Jira manually, team members 
+                can ask the bot questions and get structured, accurate results pulled directly from 
+                indexed project data.
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">UX/UI Applications & Data Analytics Intern</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Company</span>
+                    <span class="meta-value">Clarios</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Users</span>
+                    <span class="meta-value">IT Team & Developers</span>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Microsoft Copilot Studio</span>
+                <span class="tech-tag">Microsoft Graph Connector</span>
+                <span class="tech-tag">Jira</span>
+                <span class="tech-tag">Microsoft 365</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>
+                The Jira KT Bot (Knowledge Transfer Bot) is an internal Copilot Studio agent built 
+                to help Clarios IT teams and developers access Jira project data through natural 
+                language conversation. The goal was to reduce the friction of manually searching 
+                through Jira tickets and make project information easier to surface during knowledge 
+                transfer and day-to-day work.
+            </p>
+            <p>
+                Rather than building the agent with the standard Power Platform Jira connector - 
+                which introduced payload size limitations and reliability issues - I used a 
+                Microsoft Graph connector to index Jira data directly into Microsoft 365. This 
+                approach gave the agent a much more reliable and scalable knowledge source, with 
+                results automatically scoped to what each user has permission to see in Jira.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>The Problem</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>Manual Jira Navigation</h3>
+                    <p>Finding specific tickets, checking statuses, or summarizing project activity 
+                    required manually searching through Jira - slow and disruptive during meetings 
+                    or knowledge transfer sessions.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Knowledge Transfer Gaps</h3>
+                    <p>When team members needed to get up to speed on a project, there was no fast 
+                    way to pull a summary of recent activity, open issues, or ticket history without 
+                    digging through Jira themselves.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Connector Limitations</h3>
+                    <p>The standard Power Platform Jira connector hit payload size limits when 
+                    returning large result sets, making it unreliable for real-world query volumes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>What I Built</h2>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>Graph Connector Knowledge Source</h3>
+                        <p>
+                            Instead of using the Power Platform Jira connector as a tool inside the agent, 
+                            I used a Microsoft Enterprise Graph connector to index Jira issues directly 
+                            into Microsoft 365. This means the agent can semantically search Jira data 
+                            the same way it searches any other Microsoft 365 knowledge source - without 
+                            hitting payload limits or needing manual JQL query configuration. The indexed 
+                            data includes issue keys, statuses, assignees, summaries, dates, and links 
+                            back to the original Jira ticket.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>Natural Language Jira Queries</h3>
+                        <p>
+                            Team members can ask the bot questions in plain English and get structured 
+                            results back. For example, asking "show me recent Jira tasks from OneVarta 
+                            With Sitefinity" returns a formatted list of the most recent tickets with 
+                            issue key, status, assignee, summary, dates, and a direct link back to Jira. 
+                            No JQL knowledge required.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>Permission-Scoped Results</h3>
+                        <p>
+                            Because the data is indexed through the Microsoft Graph connector, the agent 
+                            automatically respects each user's existing Jira permissions. Users only see 
+                            issues they already have access to in Jira - no additional access control 
+                            configuration needed inside the agent itself.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">04</div>
+                    <div class="feature-content">
+                        <h3>Generative Orchestration Design</h3>
+                        <p>
+                            The agent was designed around Copilot Studio's generative orchestration mode 
+                            rather than rigid predefined topic flows. This means the agent reasons about 
+                            what the user is asking and decides when to call the Jira knowledge source 
+                            versus responding from general context - making conversations feel natural 
+                            and flexible rather than scripted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical Details</h2>
+            <div class="technical-details">
+                <div class="detail-item">
+                    <h4>Why Graph Connector Over Power Platform Connector</h4>
+                    <p>
+                        The Power Platform Jira connector was the first approach tried, but it ran into 
+                        payload size issues when returning realistic result sets. The Microsoft Graph 
+                        connector indexes Jira Cloud issues into Microsoft 365 at the admin level, 
+                        making them searchable across the Microsoft 365 ecosystem. This approach is 
+                        more reliable, handles larger data volumes, and integrates cleanly with Copilot 
+                        Studio as a knowledge source rather than a tool action.
+                    </p>
+                </div>
+
+                <div class="detail-item">
+                    <h4>What the Agent Returns</h4>
+                    <p>
+                        For each Jira query the agent surfaces: issue key, status, 
+                        assignee, full summary, created and closed dates, and a direct link back to 
+                        the ticket in Jira. Results are formatted cleanly in the chat interface so 
+                        they are easy to scan without leaving the conversation.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-stat">
+                    <div class="impact-number">2</div>
+                    <div class="impact-label">Jira Projects Indexed</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">0</div>
+                    <div class="impact-label">JQL Knowledge Required</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="impact-number">M365</div>
+                    <div class="impact-label">Native Integration</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+                The KT Bot gives IT teams and developers a faster way to surface Jira information 
+                without context-switching into Jira itself. The Graph connector approach solved the 
+                reliability issues that blocked the original Power Platform connector implementation 
+                and produced clean, well-structured results from day one. The permission-scoped 
+                architecture means it can be rolled out broadly without any risk of users seeing 
+                data they shouldn't have access to.
+            </p>
+        </div>
+
+
+
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="project-nav">
+        <a href="project-varta-agent.html" class="nav-button">
+            <span>← Previous: VARTA AI Customer Agent</span>
+        </a>
+        <a href="project-sentiment-analysis.html" class="nav-button">
+            <span>Next: Customer Sentiment Analysis →</span>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; East Seawright. Ode to iteration_</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
